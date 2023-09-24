@@ -1,0 +1,24 @@
+.back{
+  width: 270px;
+  height: 147px;
+  background: url(../images/bg-card-back.png) no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  transition: all .3s;
+}
+
+.back .cvc{
+  translate: 13pc 63px;
+  width: min-content;
+  color: hsl(270, 3%, 87%);
+}
+
+@media screen and (min-width: 900px) {
+  .back{
+    width: 350px;
+    height: 192px;
+  }
+  .back .cvc{
+    translate: 17.5pc 83px;
+  }
+}

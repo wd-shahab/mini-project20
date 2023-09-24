@@ -1,0 +1,45 @@
+.front{
+  width: 270px;
+  background: url(../images/bg-card-front.png) no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all .3s;
+}
+
+.front .top{
+  margin-bottom: 1.75rem;
+}
+
+.front .num{
+  color: white;
+  font-size: 20px;
+  margin-bottom: .5rem;
+}
+
+.front img{
+  width: 65px;
+}
+
+.front .bottom{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+@media screen and (min-width: 900px) {
+  .front{
+    width: 350px;
+    padding: 1.5rem;
+  }
+  .front img{
+    width: auto;
+  }
+  .front .top{
+    margin-bottom: 2rem;
+  }
+  .front .num{
+    margin-bottom: 1rem;
+    font-size: 25px;
+  }
+}

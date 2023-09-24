@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  min-width: 280px;
+  font-family: "Space Grotesk";
+  background: url(../images/bg-main-mobile.png) no-repeat;
+  background-size: contain;
+}
+
+.bottom-input{
+  display: flex;
+  align-items: end;
+}
+
+.date-input div{
+  display: flex;
+}
+
+.cvc-in{
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 280px;
+}
+
+form input{
+  padding: .75rem;
+  outline: none;
+  border: 1px solid hsl(270, 3%, 87%);
+  border-radius: 7px;
+  font-size: 15px;
+  
+}
+
+input:focus{
+  border-color: hsl(278, 68%, 11%);
+}
+
+form > input{
+  width: 100%;
+  margin: .5rem 0 2rem;
+}
+
+label{
+  font-size: 12px;
+}
+
+form input::placeholder{
+  color: hsl(270, 3%, 87%);
+}
+
+.date-input > div input {
+  margin-right: .5rem;
+}
+
+.cvc-in input,
+.date-input input{
+  margin-top: .75rem;
+}
+
+.cvc-in input{
+  width: 100%;
+}
+
+button{
+  margin-top: 2rem;
+  background: hsl(278, 68%, 11%);
+  color: white;
+  padding: 1rem 0;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: all .3s;
+}
+
+.form{
+  display: flex;
+  justify-content: center;
+}
+
+.cards{
+  height: 280px;
+}
+
+.front,
+.back{
+  position: absolute;
+}
+
+.back{
+  z-index: -1;
+  left: 60%;
+  top: 20px;
+  translate: -60%;
+}
+
+.front{
+  left: 50%;
+  translate: -57% 66%;
+}
+
+.continue{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
+
+.continue img{
+  width: 90px;
+  margin: .5rem auto;
+}
+.continue p{
+  font-weight: 900;
+  font-size: 25px;
+  margin: 1rem auto;
+  color: hsl(278, 68%, 11%);
+}
+.continue span{
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: hsl(279, 6%, 55%);
+}
+.continue button{
+  width: 60%;
+  margin: 0 auto;
+  transition: all .3s;
+}
+button:hover{
+  box-shadow: 0 0 10px #3b3b3b;
+}
+button:active{
+  box-shadow: none;
+  scale: .9;
+}
+
+
+button:disabled{
+  opacity: .4;
+  cursor: not-allowed;
+}
+button:disabled:hover{
+  box-shadow: none;
+}
+button:disabled:active{
+  scale: 1;
+}
+
+@media screen and (min-width: 425px) {
+  body{
+    background-position: 0 -20vw;
+  }
+}
+
+@media screen and (min-width: 635px) {
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/bg-main-desktop.png) no-repeat;
+    background-position: -50vw;
+  }
+  .container{
+    width: 100%;
+    display: flex;
+  }
+  .cards{
+    height: auto;
+  }
+  .front,
+  .back{
+    position: inherit;
+    translate: 0;
+  }
+  .cards,
+  .form{
+    width: 50%;
+  }
+  .cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .back{
+    align-self: end;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body{
+    background-position: -30vw;
+  }
+
+  .container{
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body{
+    background-position: -15vw;
+  }
+
+  .container{
+    width: 90%;
+  }
+
+  .cards{
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  body{
+    background-position: -8vw;
+  }
+
+  .container{
+    width: 80%;
+  }
+
+  .back{
+    align-self: center;
+  }
+}
+
+.show form{
+  display: none;
+}
+
+.show .continue{
+  display: flex;
+}
